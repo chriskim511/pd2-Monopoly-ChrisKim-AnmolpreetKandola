@@ -1,2 +1,2 @@
 CK and AK: June 2, 2014: 
-Decided to focus our final project on Monopoly
+Decided to focus our final project on Monopoly. We have decided to incorporate more features that require additional data structures, like Chance and Community, as well as the traditional property and Go To Jail spots. We also want to add other 'effect' spots on the board which will make the game more interesting and less monotonous. We also want to make a log of events so players can keep track of what they have, and what has happened.
