@@ -3,4 +3,5 @@ Decided to focus our final project on Monopoly. We have decided to incorporate m
 
 AK and CK: June 3, 2014:
 We have planned and mapped out the features and structures we want to use for our project. Tiles on the board: Properties, tax, GO, 'Go to Jail', Chance, Community Chest. We will use a doubly linked list in case a person has to move back and this will also loop the board around. To store the properties owned and money that each person has, we will have a bank account class that also contains properties for each person. Stacks or queues for the community chest/chance cards (when used, the text will be revealed, the effect taken and it will be moved to the bottom of the list, or to the top depending on how we decide to make the list). 
+
 CK: Created the different classes we'll be using for the project
