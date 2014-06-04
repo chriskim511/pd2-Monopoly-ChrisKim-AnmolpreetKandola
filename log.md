@@ -8,7 +8,7 @@ CK: Created the different classes we'll be using for the project
 
 AK: June 3rd, 2014: Created constructors, insatiated variables for account, Monopoly, Board. Realized we need properties to have their own class, where their value can be stored.
 
-CK and AK: June 4th, 2014: 
+CK: June 4th, 2014: 
 We have decided on what data structures we plan to use. In terms of the board, we're going to use a doubley linked list. For the maintenance of the random chance and community chest cards, we also plan to use a doubley linked list. However, for the bank account, when we store properties, we have also decided to use a linked list, simply because the amount of properties is negligible for find time. 
 
 AK: Started on expiermenting with processing, looking to figure out how to create a board and an interactive environment between the user and the computer. 
