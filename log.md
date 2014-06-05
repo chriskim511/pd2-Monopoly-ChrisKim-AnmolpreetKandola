@@ -13,4 +13,4 @@ We have decided on what data structures we plan to use. In terms of the board, w
 
 AK June 4th, 2014: Started on expiermenting with processing, looking to figure out how to create a board and an interactive environment between the user and the computer. Also trying to figure out how to make the side panel that will display the events that occur in the game.
 
-AK June 5th, 2014: Continued to learn and work on the board (processing). Made the spaces of the board, allocating equal amounts of space, while also learning how to work the color schemes and fill for the individual spaces.
+AK June 5th, 2014: Continued to learn and work on the board (processing). Made the spaces of the board, allocating equal amounts of space, while also learning how to work the color schemes and fill for the individual spaces. I don't understand how to fix the colors, anytime I try to fill, it ends up being a different shade of gray.
