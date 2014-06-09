@@ -18,3 +18,5 @@ AK June 5th, 2014: Continued to learn and work on the board (processing). Made t
 AK June 6th, 2014: Continued work on the board. Figured out RGB coloring, and worked on spacing of properties and creating rectangles for spots on the board. Plan to finish this quickly over the weekend and move on to making the community chest and chance cards as well as the board/player classes (linked classes).
 
 CK June 8th 2014: Two player game decided, going to be working on the storage of the data and the game mechanics itself. Unfortunately, I've been busy over the weekend (went on a weekend vaca), so I'm planning to work on Monopoly starting tomorrow after I finish all of this hw I have tonight. 
+
+AK June 8th 2014: Not home for most of the weekend, updated the board, will work on the actual cards and players account next. Still need to learn how to work with text rotation in processing.
