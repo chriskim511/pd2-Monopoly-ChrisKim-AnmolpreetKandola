@@ -1,0 +1,66 @@
+Property Information:
+// Mortgage values yet to be decided, but should be proportional
+// to their buying prices.
+Blue:
+	Rock Blvd: $100
+	CS St: $400
+	Bio Blvd: $250
+	Calc Av: $150
+White:
+	Box Av: $200
+	Mouse Pad: $150
+	Broadway: $350
+	Canal St: $100
+Yellow:
+	City Hall: $200
+	Grand Central: $300
+	Times Square: $450
+	Sunset Blvd: $100
+Red:
+	Laptop Condo: $125
+	Silicon Valley: $500
+	New Haven: $200
+Purple:
+	Chambers Street: $350
+	Liberty Av: $225
+	Lefferts: $150
+
+Chance Cards:
+
+"Advance to Go Collect 200"
+"Advance to Illinois Ave"
+"Advance token to Utility. If unowned, you may buy it from the Bank"
+"Advance token to the Railroad"
+"You have won a crossword competition Collect 150"
+"Money on the floor Collect 100"
+"Bank pays you dividend Collect 50"
+"Lost Wallet Collect 50"
+"Found a ring Collect 50"
+"Bank debt Pay 200"
+"Make general repairs on all your property Pay 100"
+"Pay poor tax Pay 15"
+"Take a trip to Reading Railroad if you pass Go collect 200"
+"Lost Dog Found Collect 50"
+"You have been elected chairman of the board Pay 50 "
+"Your building loan matures Collect 150"
+
+Community Chest Cards:
+
+"Advance to Go Collect 200"
+"Bank error in your favor Collect 75"
+"Doctor's fees Pay 50"
+"Bank Tax Pay 50"
+"Tax Refunds Collect 50"
+"It is your birthday Collect 40"
+"Grand Opera Night Collect 150"
+"Income Tax refund  Receive 20"
+"Pay Hospital Fees Pay 100"
+"Pay School Fees Pay 50"
+"Receive Consultancy Fee Receive 25"
+"You are assessed for street repairs Pay 200"
+"You have won second prize in a beauty contest Collect 10"
+"You inherit money Receive 100"
+"Sold Stocks Collect 50"
+"Holiday Fund matures Collect 100"
+	
+	
