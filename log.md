@@ -22,3 +22,5 @@ CK June 8th 2014: Two player game decided, going to be working on the storage of
 AK June 8th 2014: Not home for most of the weekend, updated the board, will work on the actual cards and players account next. Still need to learn how to work with text rotation in processing.
 
 CK June 9th 2014: Started the Linked List for the board itself. We're going to have one linked list that represents the board, and the accounts itself will be a linked list. 
+
+AK June 9th, 2014: Finished the board. Included text of the spaces on the board. Created the Commmunity Chest Cards and Chance Cards, will assign integer values and randomized to create decks to be used in the game.
