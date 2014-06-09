@@ -1,6 +1,38 @@
 Property Information:
 // Mortgage values yet to be decided, but should be proportional
 // to their buying prices.
+In order:
+	GO
+	Canal St: $100 (White)
+	Sunset Blvd: $100 (Yellow)
+	Times Square: $450 (Yellow)
+	Community Chest
+	Grand Central: $300 (Yellow)
+	City Hall: $200 (Yellow)
+	Jail
+	Rock Blvd: $100 (Blue)
+	Box Av: $200 (White)
+	CS St: $400 (Blue)
+	Bio Blvd: $250 (Blue)
+	Calc Av: $150 (Blue)
+	Chance
+	Free Parking
+	Mouse Pad: $150 (White)
+	Community Chest
+	Laptop Condo: $125 (Red)
+	Chance
+	Silicon Valley: $500 (Red)
+	New Haven: $200 (Red)
+	Go To Jail
+	Broadway: $350 (White)
+	Lefferts: $150 (Purple)
+	Community Chest
+	Liberty Av: $225 (Purple)
+	Chambers St: $350 (Purple)
+	Chance
+//END OF BOARD
+	
+	
 Blue:
 	Rock Blvd: $100
 	CS St: $400
@@ -21,7 +53,7 @@ Red:
 	Silicon Valley: $500
 	New Haven: $200
 Purple:
-	Chambers Street: $350
+	Chambers St: $350
 	Liberty Av: $225
 	Lefferts: $150
 
