@@ -16,3 +16,5 @@ AK June 4th, 2014: Started on expiermenting with processing, looking to figure o
 AK June 5th, 2014: Continued to learn and work on the board (processing). Made the spaces of the board, allocating equal amounts of space, while also learning how to work the color schemes and fill for the individual spaces. I don't understand how to fix the colors, anytime I try to fill, it ends up being a different shade of gray.
 
 AK June 6th, 2014: Continued work on the board. Figured out RGB coloring, and worked on spacing of properties and creating rectangles for spots on the board. Plan to finish this quickly over the weekend and move on to making the community chest and chance cards as well as the board/player classes (linked classes).
+
+CK June 8th 2014: Two player game decided, going to be working on the storage of the data and the game mechanics itself. Unfortunately, I've been busy over the weekend (went on a weekend vaca), so I'm planning to work on Monopoly starting tomorrow after I finish all of this hw I have tonight. 
