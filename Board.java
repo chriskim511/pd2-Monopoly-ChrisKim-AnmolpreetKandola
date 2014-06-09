@@ -1,10 +1,10 @@
 public class Board {
     
-    private Node head1, head2; 
+    private Node head;
+    private int pos1, pos2;
     
     public Board(Account x, Account y) {
-	head1 = null;
-	head2 = null;
+	head = null;
     }
     
     public void add(

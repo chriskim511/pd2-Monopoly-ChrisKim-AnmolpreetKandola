@@ -1,16 +1,16 @@
 public class Node {
     
-    private Account data;
+    private Property data;
     private int pos; 
     private Node next;
     
     public Node(String d) {
 	data = d;
     }
-    public void setData(Account d) {
+    public void setData(Property d) {
 	data = d;
     }
-    public String getData() {
+    public Property getData() {
 	return data;
     }
     public void setPos(int i) {

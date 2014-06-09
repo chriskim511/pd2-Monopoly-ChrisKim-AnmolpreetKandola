@@ -20,3 +20,5 @@ AK June 6th, 2014: Continued work on the board. Figured out RGB coloring, and wo
 CK June 8th 2014: Two player game decided, going to be working on the storage of the data and the game mechanics itself. Unfortunately, I've been busy over the weekend (went on a weekend vaca), so I'm planning to work on Monopoly starting tomorrow after I finish all of this hw I have tonight. 
 
 AK June 8th 2014: Not home for most of the weekend, updated the board, will work on the actual cards and players account next. Still need to learn how to work with text rotation in processing.
+
+CK June 9th 2014: Started the Linked List for the board itself. We're going to have one linked list that represents the board, and the accounts itself will be a linked list. 
