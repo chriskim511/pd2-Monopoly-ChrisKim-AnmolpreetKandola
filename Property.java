@@ -7,6 +7,15 @@ public class Property {
 	value = v;
 	rent = r;
     }
+    public int getValue() {
+	return value;
+    }
+    public int getRent() {
+	return rent;
+    }
+    public String toString() {
+	return name;
+    }
 }
     
 	
