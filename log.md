@@ -24,3 +24,5 @@ AK June 8th 2014: Not home for most of the weekend, updated the board, will work
 CK June 9th 2014: Started the Linked List for the board itself. We're going to have one linked list that represents the board, and the accounts itself will be a linked list. 
 
 AK June 9th, 2014: Finished the board. Included text of the spaces on the board. Created the Commmunity Chest Cards and Chance Cards, will assign integer values and randomized to create decks to be used in the game.
+
+CK June 9th 2014: Updated the Board's Linked list. It'll be nodes composed of properties. The nodes will also contain the information of its position. Still have to sort out this design though. Possibly going to use toString to convert to processing. 
