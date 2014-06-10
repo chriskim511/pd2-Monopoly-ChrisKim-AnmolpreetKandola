@@ -1,18 +1,14 @@
 public class Property {
     
     String name;
-    int value, rent, position;
-    public Property(String n, int v, int r, int pos) {
+    int value, rent;
+    public Property(String n, int v, int r) {
 	name = n;
 	value = v;
 	rent = r;
-	position = pos;
     }
     public int getValue() {
 	return value;
-    }
-    public int getPosition() {
-	return position;
     }
     public int getRent() {
 	return rent;

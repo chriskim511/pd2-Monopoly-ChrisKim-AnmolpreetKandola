@@ -3,7 +3,7 @@ public class Board {
     private Node head;
     private int pos1, pos2;
     
-    public Board(Account x, Account y) {
+    public Board() {
 	head = null;
     }
     
@@ -12,8 +12,35 @@ public class Board {
 	temp.setNext(head);
 	head = temp;
     }
-	
-    // Our board, which will obviously keep the information regarding the properties and sequence of the board
-	// Each property needs to have its own value
-
+    
+    public int find(Property prop) {
+	Node temp = head;
+	int i = -1;
+	while (temp != null) {
+	    i += 1;
+	    if (temp.getData().equals(s)) {
+		return i;
+	    }
+	    temp = temp.getNext();
+	}
+	return -1;
+    }
+    public Property get(int a) {
+	Node temp = head;
+	Property prop = new Property
+	int i = -1;
+	while (temp != null) {
+	    i+= 1;
+	    if (i == a) {
+		return temp.getData();
+	    }
+	    temp = temp.getNext();
+	}
+	return //a property or something
+    }
+    public String toString() {
+	String s = "";
+	return s;
+	// this'll be our conversion to processing code?
+    }
 }

@@ -4,8 +4,9 @@ public class Node {
     private int pos; 
     private Node next;
     
-    public Node(Property d) {
+    public Node(Property d, int p) {
 	data = d;
+	pos = p;
     }
     public void setData(Property d) {
 	data = d;

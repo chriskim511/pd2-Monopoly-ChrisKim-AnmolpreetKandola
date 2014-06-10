@@ -4,7 +4,7 @@ public class Node {
     private int pos; 
     private Node next;
     
-    public Node(String d) {
+    public Node(Property d) {
 	data = d;
     }
     public void setData(Property d) {

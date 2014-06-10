@@ -3,7 +3,7 @@ public class Board {
     private Node head;
     private int pos1, pos2;
     
-    public Board(Account x, Account y) {
+    public Board() {
 	head = null;
     }
     
@@ -27,6 +27,7 @@ public class Board {
     }
     public Property get(int a) {
 	Node temp = head;
+	Property prop = new Property();
 	int i = -1;
 	while (temp != null) {
 	    i+= 1;
@@ -35,14 +36,11 @@ public class Board {
 	    }
 	    temp = temp.getNext();
 	}
-	return //a property or something
+	return prop;
     }
     public String toString() {
 	String s = "";
+	return s;
 	// this'll be our conversion to processing code?
     }
-	
-    // Our board, which will obviously keep the information regarding the properties and sequence of the board
-	// Each property needs to have its own value
-
 }
