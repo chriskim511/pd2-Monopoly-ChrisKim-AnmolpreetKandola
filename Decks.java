@@ -5,8 +5,7 @@ import java.util.ArrayList;
 
 public class Decks {
 
-    public ArrayList<String> ccdeck;
-    ccdeck = new ArrayList<String>();
+    ArrayList<String> ccdeck = new ArrayList<String();
     ccdeck.add("Advance to Go. Collect 200");
     ccdeck.add("Bank error in your favor. Collect 75");
     ccdeck.add("Doctor's fees. Pay 50");
@@ -23,8 +22,8 @@ public class Decks {
     ccdeck.add("You inherit money. Receive 100");
     ccdeck.add("Sold Stocks. Collect 50");
     ccdeck.add("Holiday Fund matures. Collect 100");
-    public ArrayList<String> chancedeck;
-    chancedeck = new ArrayList<String>();
+
+    ArrayList<String> chancedeck = new ArrayList<String>();
     chancedeck.add("Advance to Go. Collect 200");
     chancedeck.add("Advance to Illinois Ave");
     chancedeck.add("Advance token to Utility. If unowned, you may buy it from the Bank");
@@ -47,14 +46,16 @@ public class Decks {
     public String pullOutChanceCard() {
 	Random rand = new Random();
 	int index = rand.nextInt(chancedeck.size());
-	chancedeck.add(chancedecklsize()-1,chancedeck.remove(index));
-	return chancedeck.get(chancedeck.size()-1);
+	String card = chancedeck.remove(index);
+	chancedeck.add(chancedeck.size()-1,card);
+	return card;
     }
 
      public String pullOutCCCard() {
 	Random rand = new Random();
 	int index = rand.nextInt(ccdeck.size());
-	chancedeck.add(ccdecksize()-1,ccdeck.remove(index));
-	return ccdeck.get(ccdeck.size()-1);
+	String card2 = ccdeck.remove(index);
+	ccdeck.add(ccdeck.size()-1,card2);
+	return card2;
      }
 }
