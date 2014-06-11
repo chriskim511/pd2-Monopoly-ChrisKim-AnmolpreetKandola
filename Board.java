@@ -7,8 +7,8 @@ public class Board {
 	head = null;
     }
     
-    public void add(Property prop) {
-	Node temp = new Node(prop);
+    public void add(Property prop, int i) {
+	Node temp = new Node(prop, i);
 	temp.setNext(head);
 	head = temp;
     }
