@@ -18,7 +18,7 @@ public class Board {
 	int i = -1;
 	while (temp != null) {
 	    i += 1;
-	    if (temp.getData().equals(s)) {
+	    if (temp.getData().equals(prop)) {
 		return i;
 	    }
 	    temp = temp.getNext();

@@ -17,7 +17,7 @@ public class Node {
     public void setPos(int i) {
 	pos = i;
     }
-    public void getPos() {
+    public int getPos() {
 	return pos;
     }
     public void setNext(Node n) {
@@ -27,6 +27,6 @@ public class Node {
 	return next;
     }
     public String toString() {
-	return data;
+	return "hi";
     }
 }

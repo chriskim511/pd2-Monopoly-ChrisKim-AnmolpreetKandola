@@ -7,8 +7,8 @@ public class Board {
 	head = null;
     }
     
-    public void add(Property prop) {
-	Node temp = new Node(prop);
+    public void add(Property prop, int i) {
+	Node temp = new Node(prop, i);
 	temp.setNext(head);
 	head = temp;
     }
@@ -27,7 +27,7 @@ public class Board {
     }
     public Property get(int a) {
 	Node temp = head;
-	Property prop = new Property
+	Property prop = new Property();
 	int i = -1;
 	while (temp != null) {
 	    i+= 1;
@@ -36,7 +36,7 @@ public class Board {
 	    }
 	    temp = temp.getNext();
 	}
-	return //a property or something
+	return prop;
     }
     public String toString() {
 	String s = "";
