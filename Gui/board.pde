@@ -1,7 +1,11 @@
 void setup() {
    size(600,600);
    board();
+   Monopoly a = new Monopoly();
+   
 }
+
+
 void board() {
    rectMode(CORNERS);
    fill(135,223,130); // figure out colors
@@ -343,7 +347,98 @@ void board() {
    textFont(a27);
    text(b27,10,30);
    
+}
+
+//GAMEPLAY STARTS HERE!
+
+void draw() {
+  fill(255);
+  rect(2,520,112,550);
+  if(mousePressed) {
+    if(mouseX>2 && mouseX<114 && mouseY>520 && mouseY<1070) {
+      //functionname - player1 (the move function (dice roll))
+    }
+  }
+   PFont a31;
+   String b31 = "Start";
+   a31 = createFont("Arial",12,true);
+   fill(0);
+   textFont(a31);
+   text(b31,8,535);
+  
+  
+  
+  
+  
+  
+  //(after the dice roll)
+  fill(255);
+  rect(2,452,112,512);
+  if(mousePressed) {
+    if(mouseX>2 && mouseX<114 && mouseY>452 && mouseY<964) {
+      //functionname - check for jail card/cc card/chance card and what happens if you are on them
+      
+    }
+  }
+   PFont a28;
+   String b28 = "Check";
+   a28 = createFont("Arial",12,true);
+   fill(0);
+   textFont(a28);
+   text(b28,8,482);
    
- 
+   //buying property
+  
+  fill(255);
+  rect(116,452,226,512);
+  if(mousePressed) {
+    if(mouseX>116 && mouseX<342 && mouseY>452 && mouseY<964) {
+     //functionname - check if property is buyable. If so, your function should just remove the money out and the property should become owned. Otherwise, NOTHING happens
+    }
+  }
+   PFont a29;
+   String b29 = "Buy Property";
+   a29 = createFont("Arial",12,true);
+   fill(0);
+   textFont(a29);
+   text(b29,124,482);
+   
+   //selling property
+  
+  fill(255);
+  rect(230,452,340,512);
+
+  if(mousePressed) {
+    if(mouseX>230 && mouseX<570 && mouseY>452 && mouseY<964) {
+      //functionname - selling property function, adds money to ur account
+    }
+  }
+   PFont a30;
+   String b30 = "Sell Property";
+   a30 = createFont("Arial",12,true);
+   fill(0);
+   textFont(a30);
+   text(b30,238,482);
+   
+   
+   
+   
+   
+   // END TURN
+   
+   fill(255);
+  rect(116,520,200,550);
+
+  if(mousePressed) {
+    if(mouseX>116 && mouseX<316 && mouseY>520 && mouseY<1070) {
+      //functionname - makes the next player (p2) start his/her turn, by just moving to the dice roll or however you set that up.
+    }
+  }
+   PFont a32;
+   String b32 = "End";
+   a32 = createFont("Arial",12,true);
+   fill(0);
+   textFont(a32);
+   text(b32,120,535);
 }
 
