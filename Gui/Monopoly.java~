@@ -62,6 +62,8 @@ public class Monopoly {
 	boolean on = true;
 	int dice1 = 0;
 	int dice2 = 0;
+	Card x = null;
+	Decks deck = new Decks();
 	Property temp = null;
 	Account player1 = new Account("Charles");
 	Account player2 = new Account("David");
@@ -69,9 +71,30 @@ public class Monopoly {
 	    dice1 += player1.roll();
 	    if (dice1 > 27) {
 		dice1 -= 28;
+		player1.money += 200;
 	    }
 	    temp = Board.get(27-dice1);
-	    if (player1.purchasable(temp)) {
+	    if (("" + temp).equals("Chance")) {
+		x = deck.pullOutChanceCard();
+		if (x.advance()) {
+		    dice1 = 0;
+		    player1.money += 200;
+		}
+		else {
+		    player1.money += x.getValue();
+		}
+	    }
+	    else if (("" + temp).equals("Community Chest")) {
+                x = deck.pullOutCCCard();
+                if (x.advance()) {
+                    dice1 = 0;
+                    player1.money += 200;
+		}
+		else {
+                    player1.money += x.getValue();
+		}
+            }
+	    else if (player1.purchasable(temp)) {
 		player1.buy(temp);
 		temp.purchase();
 	    }
@@ -80,22 +103,49 @@ public class Monopoly {
 	    }
 	    if (player1.money < 0) {
 		on = false; 
-		System.out.println(player1);
 	    }
-	    dice2 += player2.roll();
-            if (dice2 > 27) {
-                dice2 -= 28;
-	    }   
-	    temp = Board.get(27-dice2);
-	    if (player2.purchasable(temp)) {
-                player2.buy(temp);
-            }
-            else if (temp.purchased()) {
-                player2.get(player1.pay(temp));
-            }
-	    
-	    
+	    System.out.println(player1);
+	    if (on) {
+		dice2 += player2.roll();
+		if (dice2 > 27) {
+		    dice2 -= 28;
+		    player2.money += 200;
+		}   
+		temp = Board.get(27-dice2);
+		if (("" + temp).equals("Chance")) {
+		    x = deck.pullOutChanceCard();
+		    if (x.advance()) {
+			dice2 = 0;
+			player2.money += 200;
+		    }
+		    else {
+			player2.money += x.getValue();
+		    }
+		}
+		else if (("" +temp).equals("Community Chest")) {
+		    x = deck.pullOutCCCard();
+		    if (x.advance()) {
+			dice2 = 0;
+			player2.money += 200;
+		    }
+		    else {
+			player2.money += x.getValue();
+		    }
+		}
+		else if (player2.purchasable(temp)) {
+		    player2.buy(temp);
+		}
+		else if (temp.purchased()) {
+		    player2.get(player1.pay(temp));
+		}
+		if (player2.money < 0) {
+		    on = false;
+		}
+		System.out.println(player2);
+		
+		
+	    }
 	}
+	    
     }
-
 }
