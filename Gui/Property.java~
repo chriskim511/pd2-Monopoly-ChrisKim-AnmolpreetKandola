@@ -24,7 +24,7 @@ public class Property {
     public int getHouse() {
 	return houses;
     }
-    public int addHouse() {
+    public void addHouse() {
 	houses += 1;
     }
     public String toString() {

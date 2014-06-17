@@ -3,7 +3,9 @@ public class Monopoly {
     public static void main(String[] args) { 
 	Board Board = new Board();
 	int i = 0;
-	Property d = new Property("Canal St", 100, 5, "w");
+	Property d = new Property("Go", 100, 5, "g");
+	Board.add(d,0);
+	d = new Property("Canal St", 100, 5, "w");
 	Board.add(d, 1);
 	d = new Property("Sunset Blvd", 120, 7, "y");
 	Board.add(d,2);
@@ -57,9 +59,17 @@ public class Monopoly {
         Board.add(d,26);
 	d = new Property("Chance", 120, 7, "c");
         Board.add(d,27);
-	System.out.println(Board);
-	
-	
+	boolean on = true;
+	int dice = 0;
+	Account player1 = new Account();
+	Account player2 = new Account();
+	while (on) {
+	    dice = player1.roll();
+	    System.out.println(dice);
+	    System.out.println(Board.get(27 - dice));
+	    if (player1.purchasable()
+		on = false;
+	}
     }
 
 }

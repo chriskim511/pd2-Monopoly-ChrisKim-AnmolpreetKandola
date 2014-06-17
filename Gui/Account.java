@@ -15,7 +15,18 @@ public class Account {
     public int getPos() {
 	return pos;
     }
+    public void buy(Property x) {
+	money -= x.getValue();
+    }
+    public Boolean purchasable(Property x) {
+	if (x.
+	return x.getValue() <= money;
+    }
+    
     public void modifyPost(int x) {
 	pos = x;
+    }
+    public int roll() {
+	return (int) (Math.random() * 6) + 1;
     }
 }
