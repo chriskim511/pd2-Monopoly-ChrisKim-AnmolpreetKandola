@@ -260,11 +260,11 @@ void board() {
    text(b15,270,400);
    //blank4
  PFont a16;
-   String b16 = "Community Chest";
+   String b16 = "Luxury Tax";
    a16 = createFont("Arial",9,true);
    fill(0);
    textFont(a16);
-   text(b16,215,415);
+   text(b16,220,415);
    //pb2
     PFont a17;
    String b17 = "Liberty Av";
