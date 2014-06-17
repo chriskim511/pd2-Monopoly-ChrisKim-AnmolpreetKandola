@@ -1,5 +1,8 @@
+import java.util.*;
+
+
 public class Account {
-    public int mone;
+    public int money;
     public int pos;
     public ArrayList<String> properties = new ArrayList<String>();
     // Need to make property holder (arraylist?) for properites, which each player starts out with none

@@ -1,3 +1,6 @@
+import java.util.*;
+
+
 public class Account {
     public int money;
     public int pos;
@@ -12,7 +15,7 @@ public class Account {
     public int getPos() {
 	return pos;
     }
-    public int modifyPost(int x) {
+    public void modifyPost(int x) {
 	pos = x;
     }
 }
