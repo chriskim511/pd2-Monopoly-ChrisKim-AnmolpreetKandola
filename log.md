@@ -29,4 +29,6 @@ CK June 9th 2014: Updated the Board's Linked list. It'll be nodes composed of pr
 
 AK June 11th, 2014: Worked on the deck class, creating a community chest deck of cards and chance deck of cards, and methods for pulling them out and then putting them on the bottom of the deck so it can be used throughout the game, and the cards are recycled. I don't understand the errors, which tell me that the strings which include waht each card says are the wrong way to start in the expression ccdeck.add("...") where ... represents what says the card says and ccdeck is the arraylist representing the deck of community chest cards. The errors are duplicated for the chancedeck.
 
-AK June 13,14,15: Attending/serving at a religious function all day (and afterschool Friday).
+AK June 13,14,15 2014: Attending/serving at a religious function all day (and afterschool Friday).
+
+AK June 16-17, 2014: Created Gui, moved all files into processing, editing Decks.java, Account.java (made constructor, fixed random, sent to Chris who was ediiting with processing, all files at once, so we didn't want merge issues). Fixed up final issues on the board itself. All that's left is the Gui file. Community Chest/CHance cards were also fixed and sent. System for turns/actual gameplay will be implemented in Gui. 
