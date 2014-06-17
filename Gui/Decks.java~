@@ -68,4 +68,5 @@ public class Decks {
 	Decks test = new Decks();
 	System.out.println(test.pullOutChanceCard());
 		
+    }
 }

@@ -7,6 +7,10 @@ public class Decks {
     ArrayList<String> ccmodel = new ArrayList<String>();
     ArrayList<String> chancedeck = new ArrayList<String>();
     ArrayList<String> chancemodel = new ArrayList<String>();
+    public int val;
+    public boolean advance = false;
+    
+    
     public Decks() {
 	ccdeck.add("Advance to Go. Collect 200");
 	ccdeck.add("Bank error in your favor. Collect 75");
@@ -15,19 +19,17 @@ public class Decks {
 	ccdeck.add("Tax Refunds. Collect 50");
 	ccdeck.add("It is your birthday. Collect 40");
 	ccdeck.add("Grand Opera Night. Collect 150");
-	ccdeck.add("Income Tax refund.  Receive 20");
+	ccdeck.add("Income Tax refund.  Collect 20");
 	ccdeck.add("Pay Hospital Fees. Pay 100");
 	ccdeck.add("Pay School Fees. Pay 50");
-	ccdeck.add("Receive Consultancy Fee. Receive 25");
+	ccdeck.add("Receive Consultancy Fee. Collect 25");
 	ccdeck.add("You are assessed for street repairs. Pay 200");
 	ccdeck.add("You have won second prize in a beauty contest. Collect 10");
-	ccdeck.add("You inherit money. Receive 100");
+	ccdeck.add("You inherit money. Collect 100");
 	ccdeck.add("Sold Stocks. Collect 50");
 	ccdeck.add("Holiday Fund matures. Collect 100");
 	ccmodel = ccdeck;
 	chancedeck.add("Advance to Go. Collect 200");
-	chancedeck.add("Advance to Illinois Ave");
-	chancedeck.add("Advance token to Utility. If unowned, you may buy it from the Bank");
 	chancedeck.add("Advance token to the Railroad");
 	chancedeck.add("You have won a crossword competition. Collect 150");
 	chancedeck.add("Money on the floor. Collect 100");
@@ -52,6 +54,10 @@ public class Decks {
 	int rand = (int) (chancedeck.size() * Math.random());
 	String card = chancemodel.get(rand);
 	chancedeck.remove(rand);
+	if (card.substring(0,7).equals("Advance")) {
+	    advance = true;
+	}
+	// finish the pay/collect
 	return card;
     }
 
