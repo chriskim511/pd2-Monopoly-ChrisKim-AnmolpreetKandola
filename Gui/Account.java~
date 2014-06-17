@@ -15,10 +15,20 @@ public class Account {
     public int getPos() {
 	return pos;
     }
-    public void Buy(Property x) {
+    public int pay(Property x) {
+	money -= x.getRent();
+	return x.getRent();
+    }
+    public void get(int x) {
+	money += x;
+    }
+    public void buy(Property x) {
 	money -= x.getValue();
     }
-    public Boolean Purchasable(Property x) {
+    public Boolean purchasable(Property x) {
+	if (x.purchased()) {
+	    return false;
+	}
 	return x.getValue() <= money;
     }
     
@@ -27,5 +37,8 @@ public class Account {
     }
     public int roll() {
 	return (int) (Math.random() * 6) + 1;
+    }
+    public String toString() {
+	return "" + money;
     }
 }

@@ -60,16 +60,48 @@ public class Monopoly {
 	d = new Property("Chance", 120, 7, "c");
         Board.add(d,27);
 	boolean on = true;
-	int dice = 0;
-	Account player1 = new Account();
-	Account player2 = new Account();
+	int dice1 = 0;
+	int dice2 = 0;
+	Property temp = null;
+	Account player1 = new Account("Charles");
+	Account player2 = new Account("David");
 	while (on) {
-	    dice = player1.roll();
-	    System.out.println(dice);
-	    System.out.println(Board.get(27 - dice));
-	    if (player1.purchasable()
-		on = false;
+	    dice1 += player1.roll();
+	    if (dice1 > 27) {
+		dice1 -= 28;
+	    }
+	    temp = Board.get(27-dice1);
+	    if (player1.purchasable(temp)) {
+		player1.buy(temp);
+		temp.purchase();
+	    }
+	    else if (temp.purchased()) {
+		player1.get(player2.pay(temp));
+	    }
+	    if (player1.money < 0) {
+		on = false; 
+	    }
+	    System.out.println(player1);
+	    if (on) {
+		dice2 += player2.roll();
+		if (dice2 > 27) {
+		    dice2 -= 28;
+		}   
+		temp = Board.get(27-dice2);
+		if (player2.purchasable(temp)) {
+		    player2.buy(temp);
+		}
+		else if (temp.purchased()) {
+		    player2.get(player1.pay(temp));
+		}
+		if (player2.money < 0) {
+		    on = false;
+		}
+		System.out.println(player2);
+		
+		
+	    }
 	}
+	    
     }
-
 }
