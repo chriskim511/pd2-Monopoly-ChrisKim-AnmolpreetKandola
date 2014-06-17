@@ -40,6 +40,11 @@ public class Board {
     }
     public String toString() {
 	String s = "";
+	Node temp = head;
+	while (temp != null) {
+	    s = s + temp.getData() + " ";
+	    temp = temp.getNext();
+	}
 	return s;
 	// this'll be our conversion to processing code?
     }
