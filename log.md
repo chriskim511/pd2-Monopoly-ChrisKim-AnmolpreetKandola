@@ -28,3 +28,5 @@ AK June 9th, 2014: Finished the board. Included text of the spaces on the board.
 CK June 9th 2014: Updated the Board's Linked list. It'll be nodes composed of properties. The nodes will also contain the information of its position. Still have to sort out this design though. Possibly going to use toString to convert to processing. 
 
 AK June 11th, 2014: Worked on the deck class, creating a community chest deck of cards and chance deck of cards, and methods for pulling them out and then putting them on the bottom of the deck so it can be used throughout the game, and the cards are recycled. I don't understand the errors, which tell me that the strings which include waht each card says are the wrong way to start in the expression ccdeck.add("...") where ... represents what says the card says and ccdeck is the arraylist representing the deck of community chest cards. The errors are duplicated for the chancedeck.
+
+AK June 13,14,15: Attending/serving at a religious function all day (and afterschool Friday).
