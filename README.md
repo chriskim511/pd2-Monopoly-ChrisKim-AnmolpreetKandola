@@ -10,5 +10,25 @@ Next you can click on the Buy property, which will check if it's buyable. If so,
 You could also click sell property (will automatically remove the property and then add the money to your account if the action is possible in that you do in fact own the property). 
 Then you click the End button, and player 2's turn is started, and they automatically move. 
 Then they click Check and you repeat until someone loses.
+NOTE: PRICES/RENT (In order) of EACH PROPERTY SPACE IN THE GAME (TO BE USED FOR STRATEGY) and letters are irrelevant:
+  d = new Property("Canal St", 100, 5, "w");
+	d = new Property("Sunset Blvd", 120, 7,"y");
+	d = new Property("Times Square", 120, 7, "y");
+	d = new Property("Grand Central", 140, 9, "y");
+	d = new Property("City Hall", 140, 9, "y");
+	d = new Property("Rock Blvd", 160, 11, "b");
+	d = new Property("Box Av", 160, 11, "w");
+	d = new Property("CS St", 160, 11, "b");
+	d = new Property("Bio Blvd", 180, 13, "b");
+	d = new Property("Calc Av", 180, 13, "b");
+	d = new Property("Mouse Pad", 220, 15, "w");
+	d = new Property("Laptop Condo", 240, 17, "r");
+	d = new Property("Silicon Valley", 260, 19, "r");
+	d = new Property("New Haven", 260, 19, "r");
+	d = new Property("Broadway", 220, 15, "w");
+	d = new Property("Lefferts", 280, 21, "m");
+	d = new Property("Liberty Av", 300, 23, "m");
+	d = new Property("Chambers St", 320, 25, "m");
+    
 What works, what doesn't: TBD
 Data structures, algorithms used: TBD
