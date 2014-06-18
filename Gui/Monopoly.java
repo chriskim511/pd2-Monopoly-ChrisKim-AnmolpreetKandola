@@ -175,6 +175,7 @@ public class Monopoly {
     }
     public void buy(int x) { 
 	if (x == 1) { 
+	    temp = Board.get(27-dice1);
 	    if (player1.purchasable(temp)) {
 		player1.buy(temp);
 		temp.purchase(x);
@@ -184,6 +185,7 @@ public class Monopoly {
 	    }
 	}
 	else {
+	    temp = Board.get(27-dice2);
 	    if (player2.purchasable(temp)) {
 		player2.buy(temp);
 		temp.purchase(x);
@@ -196,12 +198,12 @@ public class Monopoly {
     public void sell(int x) { 
 	if (x == 1) { 
 	    if (temp.purchased() && temp.getPurchaser() == x) { 
-		player1.money -= temp.getValue();
+		player1.money += temp.getValue();
 	    }
         }
         else { 
 	    if (temp.purchased() && temp.getPurchaser() == x) { 
-		player2.money -= temp.getValue();
+		player2.money += temp.getValue();
 	    }
          }
      }
@@ -215,7 +217,26 @@ public class Monopoly {
         return true;
     }
     public static void main(String[] args) { 
-	
+	int player = 1;
+	boolean play = true;
+	Monopoly game = new Monopoly();
+	game.roll(player);
+	game.check(player);
+	game.buy(player);
+	game.sell(player);
+        if (game.on()) {
+	    if (player == 1) {
+		player = 2;
+	    }
+	    else {
+		player = 1;
+	    }
+	}
+	else {
+	    play = false;
+	}
+	System.out.println(game.player1);
+	System.out.println(game.player2);
 	
     }
 }

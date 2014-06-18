@@ -2,7 +2,7 @@ public class Property {
     
     String name, color;
     int value, rent, houses;
-    Boolean purchased;
+    boolean purchased = false;
     int purchaser = 0;
     public Property() {
 	name = "unknown";
@@ -21,7 +21,7 @@ public class Property {
     public String getColor() {
 	return color;
     }
-    public Boolean purchased() {
+    public boolean purchased() {
 	return purchased;
     }
     public void purchase(int x) {

@@ -1,12 +1,13 @@
 void setup() {
    size(600,600);
-   board();
    
    
 }
+int player = 1;
+boolean play = true;
+Monopoly game = new Monopoly();
 
-
-void board() {
+void draw() {
    rectMode(CORNERS);
    fill(135,223,130); // figure out colors
    rect(0,0,450,450);
@@ -346,15 +347,9 @@ void board() {
    fill(0);
    textFont(a27);
    text(b27,10,30);
-   
-}
 
 //GAMEPLAY STARTS HERE!
-
-void draw() {
-  int player = 1;
-  boolean play = true;
-  Monopoly game = new Monopoly();
+  for (int i = 0; i < 40; i = i + 1) {
   fill(255);
   rect(2,520,112,550);
   if(mousePressed) {
@@ -453,6 +448,6 @@ void draw() {
    fill(0);
    textFont(a32);
    text(b32,120,535);
-  
+  }
 }
 

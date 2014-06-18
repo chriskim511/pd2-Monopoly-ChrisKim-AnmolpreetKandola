@@ -8,16 +8,16 @@ public class Account {
     public ArrayList<String> properties = new ArrayList<String>();
     // Need to make property holder (arraylist?) for properites, which each player starts out with none
     public Account(String n) {
-	money = 200; 
+	money = 500; 
 	pos = 0;
 	name = n;
-    /* This will be the account of each player, containing the information
+	/* This will be the account of each player, containing the information
        of the properties and money of a specific player */
     }
     public int getPos() {
 	return pos;
     }
-    public int pay(Property x) {
+    public int pay(Property x) { 
 	money -= x.getRent();
 	return x.getRent();
     }
@@ -25,13 +25,15 @@ public class Account {
 	money += x;
     }
     public void buy(Property x) {
-	money -= x.getValue();
+    money -= x.getValue();
     }
-    public Boolean purchasable(Property x) {
-	if (x.purchased()) {
+    public boolean purchasable(Property x) {
+	if (x.purchased) {
 	    return false;
 	}
-	return x.getValue() <= money;
+	else {
+	    return (x.value <= money);
+	}
     }
     
     public void modifyPost(int x) {
