@@ -375,6 +375,10 @@ void draw() {
   if(mousePressed) {
     if(mouseX>2 && mouseX<114 && mouseY>452 && mouseY<964) {
       game.check(player);
+      println("Player 1: " + game.getLocation(1));
+      println("Player 2: " + game.getLocation(2));
+      println("Player 1 Money: " + game.getMoney(1));
+      println("Player 2 Money: " + game.getMoney(2));
       
     }
   }
