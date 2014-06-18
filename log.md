@@ -25,13 +25,13 @@ CK June 9th 2014: Started the Linked List for the board itself. We're going to h
 
 AK June 9th, 2014: Finished the board. Included text of the spaces on the board. Created the Commmunity Chest Cards and Chance Cards, will assign integer values and randomized to create decks to be used in the game.
 
-CK June 9th 2014: Updated the Board's Linked list. It'll be nodes composed of properties. The nodes will also contain the information of its position. Still have to sort out this design though. Possibly going to use toString to convert to processing. 
+CK June 9th 2014: Updated the Board's Linked list. It'll be nodes composed of properties. The nodes will also contain the information of its position. Still have to sort out this design though. Possibly going to use toString to convert to processing. Did the large bulk of the java part of the project. 
 
 AK June 11th, 2014: Worked on the deck class, creating a community chest deck of cards and chance deck of cards, and methods for pulling them out and then putting them on the bottom of the deck so it can be used throughout the game, and the cards are recycled. I don't understand the errors, which tell me that the strings which include waht each card says are the wrong way to start in the expression ccdeck.add("...") where ... represents what says the card says and ccdeck is the arraylist representing the deck of community chest cards. The errors are duplicated for the chancedeck.
 
 AK June 13,14,15 2014: Attending/serving at a religious function all day (and afterschool Friday).
 
-CK June 14: Was supposed to be the bulk of the time we were going to spend on the project, but unfortunately I was injured and spent a lot of my time at the ER (Email). 
+CK June 14: Was supposed to be the bulk of the time we were going to spend on the project, but unfortunately I was injured and spent a lot of my time at the ER (Email). Instead, I finished up most of the java part of the monopoly game, as it is imperative to have a working version in java before converting it to processing. Bugs will be fixed out.
 
 CK June 15: Father's Day Family Gathering
 
@@ -42,3 +42,5 @@ AK June 16-17, 2014: Created Gui, moved all files into processing, editing Decks
 AK June 17 2014: Gui the board file is completely irrelevant. In the board file however, the driver (monopoly.java) was integrated by me and the buttons that basically make the game run were created (Start, move, buy/sell, end) and their functionality implemented. All Chris has to do now, is input the functions that he has once he fixes the driver (Monopoly.java) into functions instead of one long main and then it should work, because I told him where each function is supposed to go, like under which button. Also, I wrote the directions.
 
 AK June 17-18 2014: Worked out kinks, made the game print stuff and so button makes sense and user can understand where he/she is and how much money he/she has.
+
+CK: June 17-18: Fixed all of the bugs regarding the java part of the project. However, we were unable to solve the problems involving processing. If this project is not checked by Wednesday, we will be sure to continue working on it and trying to make it work. The transition from java to processing definitely was not as smooth as we planned it to be, especially since it is harder to pinpoint the problem in processing code than it is in java code. 

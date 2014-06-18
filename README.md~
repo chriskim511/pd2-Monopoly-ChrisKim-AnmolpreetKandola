@@ -11,7 +11,7 @@ You could also click sell property (will automatically remove the property and t
 Then you click the End button, and player 2's turn is started, and they automatically move. 
 Then they click Check and you repeat until someone loses.
 NOTE: PRICES/RENT (In order) of EACH PROPERTY SPACE IN THE GAME (TO BE USED FOR STRATEGY) and letters are irrelevant:
-      d = new Property("Canal St", 100, 5, "w");
+  d = new Property("Canal St", 100, 5, "w");
 	d = new Property("Sunset Blvd", 120, 7,"y");
 	d = new Property("Times Square", 120, 7, "y");
 	d = new Property("Grand Central", 140, 9, "y");
@@ -30,5 +30,5 @@ NOTE: PRICES/RENT (In order) of EACH PROPERTY SPACE IN THE GAME (TO BE USED FOR 
 	d = new Property("Liberty Av", 300, 23, "m");
 	d = new Property("Chambers St", 320, 25, "m");
     USE THE TEXT EDITOR BOX (THE PROCESSING ONE, THE BOTTOM BOX IN THE PROCESSING TEXT EDITOR) FOR INFORMATION ON LOCATION AND MONEY YOU HAVE. CHECK IT AFTER EVERY BUTTON YOU PRESS. 
-What works, what doesn't: We encountered a problem at the very last minute, when we thought we were finally finished with the project. It involved the use of the while loop in processing and the mouseClicked for Monopoly. Because of this, Player 1 goes on a seemingless journey by himself while player 2 lags behind, simply because we are unable to stop the loop from continuing. 
-Data structures, algorithms used: For the most part, we used a combination of linked lists and Arraylists for this project. We used the linked list to store the information of the Board itself, while the Arraylists were used for smaller things like Properties and Decks. We found out just how awesome Nodes really are, as they are able to store a lot of information while providing easy access. Although we were unsuccessful in our final product due to last minute frustrations over processing, we thoroughly enjoyed exploring the ways in which we could tackle the project and the fact that there were so many ways to tackle such a problem. 
+What works, what doesn't: TBD
+Data structures, algorithms used: TBD
