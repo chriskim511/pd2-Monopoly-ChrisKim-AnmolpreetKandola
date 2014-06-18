@@ -177,32 +177,42 @@ public class Monopoly {
 	if (x == 1) { 
 	    if (player1.purchasable(temp)) {
 		player1.buy(temp);
-		temp.purchase();
+		temp.purchase(x);
 	    }
-	    else if (temp.purchased()) {
+	    else if (temp.purchased() && temp.getPurchaser() != x) {
 		player1.get(player2.pay(temp));
 	    }
 	}
 	else {
 	    if (player2.purchasable(temp)) {
 		player2.buy(temp);
+		temp.purchase(x);
 	    }
-	    else if (temp.purchased()) {
+	    else if (temp.purchased() && temp.getPurchaser() != x) {
 		player2.get(player1.pay(temp));
 	    }
 	}
     }
-    public void on(int x) { 
+    public void sell(int x) { 
 	if (x == 1) { 
+	    if (temp.purchased() && temp.getPurchaser() == x) { 
+		player1.money -= temp.getValue();
+	    }
+        }
+        else { 
+	    if (temp.purchased() && temp.getPurchaser() == x) { 
+		player2.money -= temp.getValue();
+	    }
+         }
+     }
+    public boolean on() { 
 	    if (player1.money < 0) {
-		on = false; 
+		return false; 
 	    }
-	}
-	else {
 	    if (player2.money < 0) {
-		on = false;
+		return false;
 	    }
-	}
+        return true;
     }
     public static void main(String[] args) { 
 	

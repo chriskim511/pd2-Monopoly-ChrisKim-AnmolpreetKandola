@@ -1,8 +1,7 @@
 void setup() {
    size(600,600);
    board();
-   Monopoly a = new Monopoly();
-
+   
    
 }
 
@@ -353,12 +352,15 @@ void board() {
 //GAMEPLAY STARTS HERE!
 
 void draw() {
-  
+  int player = 1;
+  boolean play = true;
+  Monopoly game = new Monopoly();
+  while (play) {
   fill(255);
   rect(2,520,112,550);
   if(mousePressed) {
     if(mouseX>2 && mouseX<114 && mouseY>520 && mouseY<1070) {
-      //functionname - player1 (the move function (dice roll))
+      game.roll(player);
     }
   }
    PFont a31;
@@ -378,7 +380,7 @@ void draw() {
   rect(2,452,112,512);
   if(mousePressed) {
     if(mouseX>2 && mouseX<114 && mouseY>452 && mouseY<964) {
-      //functionname - check for jail card/cc card/chance card and what happens if you are on them
+      game.check(player);
       
     }
   }
@@ -395,7 +397,7 @@ void draw() {
   rect(116,452,226,512);
   if(mousePressed) {
     if(mouseX>116 && mouseX<342 && mouseY>452 && mouseY<964) {
-     //functionname - check if property is buyable. If so, your function should just remove the money out and the property should become owned. Otherwise, NOTHING happens
+     game.buy(player);
     }
   }
    PFont a29;
@@ -412,7 +414,7 @@ void draw() {
 
   if(mousePressed) {
     if(mouseX>230 && mouseX<570 && mouseY>452 && mouseY<964) {
-      //functionname - selling property function, adds money to ur account
+      game.sell(player);
     }
   }
    PFont a30;
@@ -433,7 +435,17 @@ void draw() {
 
   if(mousePressed) {
     if(mouseX>116 && mouseX<316 && mouseY>520 && mouseY<1070) {
-      //functionname - makes the next player (p2) start his/her turn, by just moving to the dice roll or however you set that up.
+      if (game.on()) {
+      if (player == 1) {
+        player = 2;
+      }
+      else {
+        player = 1;
+      }
+      }
+       else {
+         play = false;
+       }
     }
   }
    PFont a32;
@@ -442,5 +454,6 @@ void draw() {
    fill(0);
    textFont(a32);
    text(b32,120,535);
+  }
 }
 
