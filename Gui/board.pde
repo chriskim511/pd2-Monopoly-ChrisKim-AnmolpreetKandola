@@ -2,6 +2,7 @@ void setup() {
    size(600,600);
    board();
    Monopoly a = new Monopoly();
+
    
 }
 
@@ -352,6 +353,7 @@ void board() {
 //GAMEPLAY STARTS HERE!
 
 void draw() {
+  
   fill(255);
   rect(2,520,112,550);
   if(mousePressed) {
