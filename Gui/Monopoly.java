@@ -173,6 +173,22 @@ public class Monopoly {
 	    }
 	}
     }
+    public String getLocation(int x) {
+        if (x == 1) {
+            return Board.get(27-dice1) + "";
+	}
+	else {
+	    return Board.get(27-dice2) + "";
+	}
+    }
+    public int getMoney(int x) {
+	if (x == 1) {
+	    return player1.money;
+	}
+	else {
+	    return player2.money;
+	}
+    }
     public void buy(int x) { 
 	if (x == 1) { 
 	    temp = Board.get(27-dice1);
