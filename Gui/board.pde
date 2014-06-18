@@ -1,7 +1,6 @@
 void setup() {
    size(600,600);
    
-   
 }
 int player = 1;
 boolean play = true;
@@ -347,14 +346,14 @@ void draw() {
    fill(0);
    textFont(a27);
    text(b27,10,30);
-
+for (int i = 0; i < 40; i++) {
 //GAMEPLAY STARTS HERE!
-  for (int i = 0; i < 40; i = i + 1) {
   fill(255);
   rect(2,520,112,550);
   if(mousePressed) {
     if(mouseX>2 && mouseX<114 && mouseY>520 && mouseY<1070) {
       game.roll(player);
+      mouseReleased();
     }
   }
    PFont a31;
@@ -375,6 +374,7 @@ void draw() {
   if(mousePressed) {
     if(mouseX>2 && mouseX<114 && mouseY>452 && mouseY<964) {
       game.check(player);
+      mouseReleased();
       println("Player 1: " + game.getLocation(1));
       println("Player 2: " + game.getLocation(2));
       println("Player 1 Money: " + game.getMoney(1));
@@ -396,6 +396,7 @@ void draw() {
   if(mousePressed) {
     if(mouseX>116 && mouseX<342 && mouseY>452 && mouseY<964) {
      game.buy(player);
+     mouseReleased();
     }
   }
    PFont a29;
@@ -413,6 +414,7 @@ void draw() {
   if(mousePressed) {
     if(mouseX>230 && mouseX<570 && mouseY>452 && mouseY<964) {
       game.sell(player);
+      mouseReleased();
     }
   }
    PFont a30;
@@ -445,6 +447,7 @@ void draw() {
          play = false;
        }
     }
+    mouseReleased();
   }
    PFont a32;
    String b32 = "End";
@@ -452,6 +455,6 @@ void draw() {
    fill(0);
    textFont(a32);
    text(b32,120,535);
-  }
+}
 }
 
