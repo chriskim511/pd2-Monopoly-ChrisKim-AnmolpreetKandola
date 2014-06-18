@@ -1,8 +1,16 @@
 public class Monopoly {
+    public Board Board = new Board();
+    public int dice1, dice2, counter1, counter2;
+    public boolean jail1 = false; 
+    public boolean jail2 = false;
+    public Card y = null;
+    public Decks deck = new Decks();
+    public Property temp = null;
+    public Account player1 = new Account("Charles");
+    public Account player2 = new Account("David");
+    public boolean on = true;
     
-    public static void main(String[] args) { 
-	Board Board = new Board();
-	int i = 0;
+    public Monopoly() {
 	Property d = new Property("Go", 100, 5, "g");
 	Board.add(d,0);
 	d = new Property("Canal St", 100, 5, "w");
@@ -59,93 +67,145 @@ public class Monopoly {
         Board.add(d,26);
 	d = new Property("Chance", 120, 7, "c");
         Board.add(d,27);
-	boolean on = true;
-	int dice1 = 0;
-	int dice2 = 0;
-	Card x = null;
-	Decks deck = new Decks();
-	Property temp = null;
-	Account player1 = new Account("Charles");
-	Account player2 = new Account("David");
-	while (on) {
+    }
+    public void roll(int x) {
+	if (x == 1) {
 	    dice1 += player1.roll();
 	    if (dice1 > 27) {
 		dice1 -= 28;
-		player1.money += 200;
+		    player1.money += 200;
 	    }
+	}
+	else {
+	    dice2 += player2.roll();
+	    if (dice2 > 27) {
+		dice2 -= 28;
+		player2.money += 200;
+	    }
+	}
+    } 
+    public void jail(int x) {
+	if (x == 1) {
+	    if (jail1) {
+		counter1 -= 1;
+		if (counter1 == 0) {
+		    jail1 = false;
+		}
+	    }
+        }
+	else {
+	    if (jail2) {
+		counter2 -= 1;
+		if (counter2 == 0) {
+		    jail2 = false;
+		}
+	    }
+	}
+    }
+
+    public void check(int x) {
+        if (x == 1) { 
 	    temp = Board.get(27-dice1);
 	    if (("" + temp).equals("Chance")) {
-		x = deck.pullOutChanceCard();
-		if (x.advance()) {
+		y = deck.pullOutChanceCard();
+		if (y.advance()) {
 		    dice1 = 0;
 		    player1.money += 200;
 		}
 		else {
-		    player1.money += x.getValue();
+		    player1.money += y.getValue();
 		}
 	    }
 	    else if (("" + temp).equals("Community Chest")) {
-                x = deck.pullOutCCCard();
-                if (x.advance()) {
-                    dice1 = 0;
-                    player1.money += 200;
+		y = deck.pullOutCCCard();
+		if (y.advance()) {
+		    dice1 = 0;
+		    player1.money += 200;
 		}
 		else {
-                    player1.money += x.getValue();
+		    player1.money += y.getValue();
 		}
-            }
-	    else if (player1.purchasable(temp)) {
+	    }
+	    else if (("" + temp).equals("Jail")) {
+	    }
+	    else if (("" + temp).equals("Free Parking")) {
+	    }
+	    else if (("" + temp).equals("Go To Jail")) {
+		jail1 = true;
+		counter1 = 3;
+	    }
+	    else if (("" + temp). equals("Luxury Tax")) {
+		player1.money -= 200;
+	    }
+	}
+	else { 
+	    temp = Board.get(27-dice2);
+	    if (("" + temp).equals("Chance")) {
+		y = deck.pullOutChanceCard();
+		if (y.advance()) {
+		    dice2 = 0;
+		    player2.money += 200;
+		}
+		else {
+		    player2.money += y.getValue();
+		}
+	    }
+	    else if (("" +temp).equals("Community Chest")) {
+		y = deck.pullOutCCCard();
+		if (y.advance()) {
+		    dice2 = 0;
+		    player2.money += 200;
+		}
+		else {
+		    player2.money += y.getValue();
+		}
+	    }
+	    else if (("" + temp).equals("Jail")) {
+	    }
+	    else if (("" + temp).equals("Free Parking")) {
+	    }
+	    else if (("" + temp).equals("Go To Jail")) {
+		jail2 = true;
+		counter2 = 3;
+	    }
+	    else if (("" + temp). equals("Luxury Tax")) {
+		player2.money -= 200;
+	    }
+	}
+    }
+    public void buy(int x) { 
+	if (x == 1) { 
+	    if (player1.purchasable(temp)) {
 		player1.buy(temp);
 		temp.purchase();
 	    }
 	    else if (temp.purchased()) {
 		player1.get(player2.pay(temp));
 	    }
+	}
+	     else {
+		 if (player2.purchasable(temp)) {
+		     player2.buy(temp);
+		 }
+		 else if (temp.purchased()) {
+		     player2.get(player1.pay(temp));
+	         }
+             }
+    }
+    public void on(int x) { 
+	if (x == 1) { 
 	    if (player1.money < 0) {
 		on = false; 
 	    }
-	    System.out.println(player1);
-	    if (on) {
-		dice2 += player2.roll();
-		if (dice2 > 27) {
-		    dice2 -= 28;
-		    player2.money += 200;
-		}   
-		temp = Board.get(27-dice2);
-		if (("" + temp).equals("Chance")) {
-		    x = deck.pullOutChanceCard();
-		    if (x.advance()) {
-			dice2 = 0;
-			player2.money += 200;
-		    }
-		    else {
-			player2.money += x.getValue();
-		    }
-		}
-		else if (("" +temp).equals("Community Chest")) {
-		    x = deck.pullOutCCCard();
-		    if (x.advance()) {
-			dice2 = 0;
-			player2.money += 200;
-		    }
-		    else {
-			player2.money += x.getValue();
-		    }
-		}
-		else if (player2.purchasable(temp)) {
-		    player2.buy(temp);
-		}
-		else if (temp.purchased()) {
-		    player2.get(player1.pay(temp));
-		}
-		if (player2.money < 0) {
-		    on = false;
-		}
-		System.out.println(player2);
-		
-		
+	}
+	else {
+	    if (player2.money < 0) {
+		on = false;
 	    }
 	}
-	    
+    }
+    public static void main(String[] args) { 
+	
+	
     }
 }
